@@ -19,7 +19,8 @@ namespace CustomerProfileWeb.Models
 
         public DateTime YearOfBorn { get; set; }
 
-        public int PhoneNo { get; set; }
+        [Column(TypeName = "nvarchar(30)")]
+        public string PhoneNo { get; set; }
 
     }
 }

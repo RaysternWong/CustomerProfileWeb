@@ -19,7 +19,7 @@ namespace CustomerProfileWeb.Migrations
                     Address = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     YearOfBorn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PhoneNo = table.Column<int>(type: "int", nullable: false)
+                    PhoneNo = table.Column<string>(type: "nvarchar(30)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -42,8 +42,9 @@ namespace CustomerProfileWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("PhoneNo")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("YearOfBorn")
                         .HasColumnType("datetime2");
