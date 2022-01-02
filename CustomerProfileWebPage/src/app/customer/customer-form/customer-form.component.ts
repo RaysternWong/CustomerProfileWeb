@@ -25,7 +25,6 @@ export class CustomerFormComponent implements OnInit {
       this.updateRecord(form);
   }
 
-
   insertRecord(form: NgForm) {
     this.service.postCustomerDetail().subscribe(
       res => {
