@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from 'src/app/shared/customer.service';
-import { NgForm } from '@angular/forms';
 import { Customer } from 'src/app/shared/customer.model';
 import { ToastrService } from 'ngx-toastr';
 

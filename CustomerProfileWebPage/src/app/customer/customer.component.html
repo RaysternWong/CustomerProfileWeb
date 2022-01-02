@@ -1,1 +1,31 @@
-<p>customer works!</p>
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Payment Detail Register</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-customer-form></app-customer-form>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>PhoneNo</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{pd.name}}</td>
+                    <td (click)="populateForm(pd)">{{pd.phoneNo}}</td>
+                    <td (click)="populateForm(pd)">{{pd.email}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.customerID)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
