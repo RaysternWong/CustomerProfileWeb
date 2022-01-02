@@ -30,7 +30,7 @@ export class CustomerComponent implements OnInit {
         .subscribe(
           res => {
             this.service.refreshList();
-            this.toastr.error("Deleted successfully", 'Payment Detail Register');
+            this.toastr.error("Deleted successfully", 'Customer Register');
           },
           err => { console.log(err) }
         )

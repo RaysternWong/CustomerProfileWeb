@@ -30,4 +30,7 @@
             #customerBornDate="ngModel" [(ngModel)]="service.formData.bornDate"
             required [class.invalid]="customerBornDate.invalid && customerBornDate.touched">
     </div>
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
 </form>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CustomerProfileWeb.Migrations
 {
     [DbContext(typeof(CustomerContext))]
-    [Migration("20220101153323_InitialCreated")]
-    partial class InitialCreated
+    [Migration("20220102060600_Creatged")]
+    partial class Creatged
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,9 @@ namespace CustomerProfileWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<DateTime>("BornDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
@@ -47,9 +50,6 @@ namespace CustomerProfileWeb.Migrations
                     b.Property<string>("PhoneNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)");
-
-                    b.Property<DateTime>("YearOfBorn")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("CustomerId");
 

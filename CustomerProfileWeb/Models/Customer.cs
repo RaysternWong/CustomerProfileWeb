@@ -17,7 +17,7 @@ namespace CustomerProfileWeb.Models
         [Column(TypeName = "nvarchar(100)")]
         public string Email { get; set; }
 
-        public DateTime YearOfBorn { get; set; }
+        public DateTime BornDate { get; set; }
 
         [Column(TypeName = "nvarchar(30)")]
         public string PhoneNo { get; set; }
