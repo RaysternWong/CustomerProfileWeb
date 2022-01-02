@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CustomerProfileWeb.Migrations
 {
     [DbContext(typeof(CustomerContext))]
-    [Migration("20220102060600_Creatged")]
-    partial class Creatged
+    [Migration("20220102140547_Created")]
+    partial class Created
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,15 +26,16 @@ namespace CustomerProfileWeb.Migrations
 
             modelBuilder.Entity("CustomerProfileWeb.Models.Customer", b =>
                 {
-                    b.Property<long>("CustomerId")
+                    b.Property<long>("CustomerID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("CustomerId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("CustomerID"), 1L, 1);
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime>("BornDate")
                         .HasColumnType("datetime2");
@@ -45,13 +46,14 @@ namespace CustomerProfileWeb.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PhoneNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("CustomerId");
+                    b.HasKey("CustomerID");
 
                     b.ToTable("Customers");
                 });

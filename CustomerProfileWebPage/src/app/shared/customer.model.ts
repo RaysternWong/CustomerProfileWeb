@@ -5,5 +5,4 @@ export class Customer {
     address:string='';
     phoneNo:string='';
     bornDate:string='';
-
 }

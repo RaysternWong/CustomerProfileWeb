@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CustomerProfileWeb.Migrations
 {
-    public partial class Creatged : Migration
+    public partial class Created : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,17 +13,17 @@ namespace CustomerProfileWeb.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    CustomerId = table.Column<long>(type: "bigint", nullable: false)
+                    CustomerID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(MAX)", maxLength: 1000, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     BornDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     PhoneNo = table.Column<string>(type: "nvarchar(30)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Customers", x => x.CustomerId);
+                    table.PrimaryKey("PK_Customers", x => x.CustomerID);
                 });
         }
 

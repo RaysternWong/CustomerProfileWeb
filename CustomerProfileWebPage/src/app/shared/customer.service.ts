@@ -11,7 +11,7 @@ export class CustomerService {
 
   constructor(private http: HttpClient) { }
 
-  readonly baseURL = 'http://localhost:61236/api/Customer'
+  readonly baseURL = 'http://localhost:40460/api/Customers'
 
   formData : Customer = new Customer();
   list: Customer[];

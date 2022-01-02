@@ -1,5 +1,5 @@
 <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
-    <input type="hidden" name="paymentDetailId" [value]="service.formData.customerID" />
+    <input type="hidden" name="customerID" [value]="service.formData.customerID" />
     <div class="form-group">
         <label>CUSTOMER NAME</label>
         <input class="form-control form-control-lg" placeholder="Full Name" name="CustomerName"
